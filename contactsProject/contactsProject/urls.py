@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("display-contacts/", views.display, name='display-contacts'),
     path("display-contacts/delete", views.delete),
+    path("display-contacts/edit", views.edit_form),
     
+
 ]
