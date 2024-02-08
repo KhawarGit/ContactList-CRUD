@@ -41,3 +41,14 @@ def edit_form(request):
     }
     
     return HttpResponse(template.render(context, request))
+
+def change(request):
+    print(request.POST.get("id"))
+    contact_to_change = Contact.objects.get(id=int(request.POST.get('id')))
+    contact_to_change.first_Name = request.POST.get("fn")
+    contact_to_change.last_Name = request.POST.get("ln")
+    contact_to_change.email = request.POST.get("email")
+    contact_to_change.comment = request.POST.get("com")
+    contact_to_change.save()
+    return redirect(reverse('display-contacts'))
+
