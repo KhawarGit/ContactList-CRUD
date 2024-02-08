@@ -52,3 +52,6 @@ def change(request):
     contact_to_change.save()
     return redirect(reverse('display-contacts'))
 
+def add_form(request):
+    template = loader.get_template('add-contact.html')
+    return HttpResponse(template.render({},request))
