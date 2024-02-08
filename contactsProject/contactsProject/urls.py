@@ -22,6 +22,8 @@ urlpatterns = [
     path("display-contacts/", views.display, name='display-contacts'),
     path("display-contacts/delete", views.delete),
     path("display-contacts/edit", views.edit_form),
+    path("display-contacts/change", views.change, name='change'),
     
+
 
 ]
