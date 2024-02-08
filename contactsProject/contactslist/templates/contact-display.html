@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List by Khawar Khan</title>
+    <link rel="stylesheet" href="{% static 'contacts.css' %}"/>
+</head>
+<body>
+    <h1 style="text-align: center;">Contacts List</h1>
+    <p style="text-align: center;">Author: Khawar Khan</p>
+    <form action="add-contact-form">
+        <input type="submit" value="Add New Contact" style="float: right;">
+    </form></br></br>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Comment</th>
+                <!-- <th>Edit</th>
+                <th>Delete</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts%}
+            <tr>
+                <td>{{contact.first_Name}} {{contact.last_Name}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.comment}}</td>
+                <!-- <td><a href="http://localhost:8000/display-contacts/edit?id={{ contact.id }}&fn={{ contact.first_Name }}&ln={{contact.last_Name}}&email={{contact.email}}&comment={{contact.comment}}">Edit</a></td>
+                <td><a href="http://localhost:8000/display-contacts/delete?id={{ contact.id }}">Delete</a></td> -->
+            </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+</body>
+</html>
