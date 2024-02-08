@@ -20,4 +20,6 @@ from contactslist import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("display-contacts/", views.display, name='display-contacts'),
+    path("display-contacts/delete", views.delete),
+    
 ]
