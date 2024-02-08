@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Contact By Khawar Khan</title>
+</head>
+<body>
+    <h1>Contact Edit Form</h1>
+    <form action="change" method="POST">
+        {% csrf_token %}
+        <input type="number" value={{contact.id}} name="id" hidden/>
+        <label for="fn">First Name: </label>
+        <input type="text" value="{{contact.first_Name}}" name="fn"></br></br>
+        <label for="ln">Last Name: </label>
+        <input type="text" value="{{contact.last_Name}}" name="ln"></br></br>
+        <label for="email">Email: </label>
+        <input type="text" value="{{contact.email}}" name="email"></br></br>
+        <label for="comment">Comment: </label>
+        <input type="text" value="{{contact.comment}}" name="com"></br></br>
+        <!-- <button>Change</button> -->
+        <input type="submit" value="Change">
+    </form>
+</body>
+</html>
