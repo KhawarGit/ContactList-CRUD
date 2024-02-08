@@ -19,7 +19,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Comment</th>
-                <!-- <th>Edit</th> -->
+                <th>Edit</th>
                 <th>Delete</th>
             </tr>
         </thead>
@@ -29,7 +29,7 @@
                 <td>{{contact.first_Name}} {{contact.last_Name}}</td>
                 <td>{{contact.email}}</td>
                 <td>{{contact.comment}}</td>
-                <!-- <td><a href="http://localhost:8000/display-contacts/edit?id={{ contact.id }}&fn={{ contact.first_Name }}&ln={{contact.last_Name}}&email={{contact.email}}&comment={{contact.comment}}">Edit</a></td> -->
+                <td><a href="http://localhost:8000/display-contacts/edit?id={{ contact.id }}&fn={{ contact.first_Name }}&ln={{contact.last_Name}}&email={{contact.email}}&comment={{contact.comment}}">Edit</a></td>
                 <td><a href="http://localhost:8000/display-contacts/delete?id={{ contact.id }}">Delete</a></td>
             </tr>
             {% endfor %}
