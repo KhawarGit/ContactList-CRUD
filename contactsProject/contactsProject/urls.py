@@ -24,8 +24,6 @@ urlpatterns = [
     path("display-contacts/edit", views.edit_form),
     path("display-contacts/change", views.change, name='change'),
     path("display-contacts/add-contact-form", views.add_form),
-    
-
-
+    path("display-contacts/add", views.add, name="add"),
 
 ]
