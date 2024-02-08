@@ -55,3 +55,13 @@ def change(request):
 def add_form(request):
     template = loader.get_template('add-contact.html')
     return HttpResponse(template.render({},request))
+
+def add(request):
+    Contact.objects.create(
+        first_Name=request.POST.get("fn"),
+        last_Name=request.POST.get("ln",''),
+        email=request.POST.get("email"),
+        comment=request.POST.get("comment", '')
+    )
+
+    return redirect(reverse('display-contacts'))
