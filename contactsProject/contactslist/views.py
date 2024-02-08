@@ -20,3 +20,9 @@ def display(request):
 
     return HttpResponse(template.render(context, request))
 
+def delete(request):
+    id = request.GET.get('id')
+    contact_to_delete = Contact.objects.get(id=id)
+    contact_to_delete.delete()
+
+    return redirect(reverse('display-contacts'))
