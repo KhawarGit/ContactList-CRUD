@@ -1,4 +1,4 @@
-# ContactsList-CRUD
+# ContactList-CRUD
 
 ContactsList-CRUD is a web application created using the Django web framework, HTML, and CSS. It allows users to manage their contacts by providing CRUD (Create, Read, Update, Delete) functionality. The application displays contacts from the database, including fields such as firstName, lastName, Email, and Comment (colleague, friend, brother, etc.). Users can edit or delete each contact and add new contacts through a user-friendly interface.
 (<strong>Author:</strong> Khawar Khan)
@@ -42,7 +42,7 @@ Before running this project, make sure you have the following prerequisites inst
 * Click `Edit` to open the edit form for the respective contact.
 * Click `Delete` to delete a contact.
 <hr>
-Enjoy managing your contacts with ContactsList-CRUD!
+Enjoy managing your contacts with ContactList-CRUD!
 
 ## Author
 Khawar Khan
