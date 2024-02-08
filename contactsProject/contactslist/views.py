@@ -30,11 +30,6 @@ def delete(request):
 def edit_form(request):
     template = loader.get_template('edit-contact.html')
 
-    # id = request.GET.get('id')
-    # fn = request.GET.get('fn')
-    # ln = request.GET.get('ln')
-    # email = request.GET.get('email')
-    # comment = request.GET.get('comment')
     context = {
         'contact': {
             'id': request.GET.get('id'),
@@ -44,5 +39,5 @@ def edit_form(request):
             'comment': request.GET.get('comment')
         }
     }
-    # print(id, fn, ln, email, comment)
+    
     return HttpResponse(template.render(context, request))
