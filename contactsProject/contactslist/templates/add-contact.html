@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Contact By Khawar Khan</title>
+</head>
+<body>
+    <h1>Add Contact Form</h1>
+    <form action="add" method="POST">
+        {% csrf_token %}
+        <label for="fn">First Name: </label>
+        <input type="text" placeholder="firstName" name="fn" required>
+        </br></br>
+        <label for="ln">Last Name: </label>
+        <input type="text" placeholder="lastName" name="ln">
+        </br></br>
+        <label for="email">Email: </label>
+        <input type="text" placeholder="abc@gmail.com" name="email" required>
+        </br></br>
+        <label for="comment">Comment: </label>
+        <input type="text" placeholder="Friend, Colleague, etc" name="comment">
+        </br></br>
+
+        <input type="submit" value="Add Contact">
+    </form>
+</body>
+</html>
