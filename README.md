@@ -46,3 +46,5 @@ Enjoy managing your contacts with ContactList-CRUD!
 
 ## Author
 Khawar Khan
+<br />
+Connect with me on LinkedIn: www.linkedin.com/in/khawar-khan
